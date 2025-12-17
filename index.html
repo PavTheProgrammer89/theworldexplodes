@@ -202,23 +202,6 @@
             }
 
             /* Accessibility */
-            .skip-link {
-                position: absolute;
-                top: -40px;
-                left: 6px;
-                background: var(--color-accent);
-                color: white;
-                padding: 8px;
-                text-decoration: none;
-                border-radius: var(--radius-sm);
-                z-index: 1001;
-                transition: top 0.2s;
-            }
-
-            .skip-link:focus {
-                top: 6px;
-            }
-
             .sr-only {
                 position: absolute;
                 width: 1px;
@@ -233,8 +216,7 @@
 
             /* Enhanced focus states */
             #nav-select:focus,
-            .theme-option input:focus,
-            .skip-link:focus {
+            .theme-option input:focus {
                 outline: 2px solid var(--color-accent);
                 outline-offset: 2px;
             }
@@ -359,8 +341,7 @@
                 }
 
                 #nav-container,
-                #theme-container,
-                .skip-link {
+                #theme-container {
                     display: none;
                 }
 
@@ -376,9 +357,6 @@
         </style>
     </head>
     <body>
-        <!-- Skip link for accessibility -->
-        <a href="#main-content" class="skip-link">Skip to main content</a>
-
         <nav id="nav-container" aria-label="Section navigation">
             <label for="nav-select" style="font-weight: bold; color: #333;">Go To (Section):</label>
             <select id="nav-select" onchange="const el = document.getElementById(this.value); if(el) el.scrollIntoView({behavior: 'smooth'});" aria-describedby="nav-description">
@@ -420,7 +398,7 @@
                         <h2 id="spawn-section">You have just spawned in. What to do?</h2>
 
                         <figure>
-                            <img src="images/spawnedIn.png" alt="Game screenshot showing the spawn area with countdown timer visible at the top of the screen" loading="lazy">
+                            <img src="images/spawnedIn.png" alt="Game screenshot showing the spawn area with countdown timer visible at the top of the screen" loading="lazy" style="width: 500px;">
                             <figcaption class="sr-only">Screenshot of the game spawn area</figcaption>
                         </figure>
 
@@ -429,7 +407,7 @@
                         <p>Once you find the button, approach it and hold it to activate it. <br>Be quick, as the timer is ticking down!</p>
 
                         <figure>
-                            <img src="images/buttonPreview.png" alt="Close-up view of the activation button that players need to find and press" loading="lazy">
+                            <img src="images/buttonPreview.png" alt="Close-up view of the activation button that players need to find and press" loading="lazy" style="width: 300px;">
                             <figcaption class="sr-only">Preview of the activation button</figcaption>
                         </figure>
 
@@ -437,12 +415,12 @@
                         <p>Shortly, you will be teleported to the 'Winners' Place,' where you should search until you find the more challenges sign, <br>and head towards it. There, you may participate in <strong>different challenges</strong> in order to win <em>Coins.</em> <br>Coins are useful to buy features in the <strong>Shop</strong> and to trade with others!</p>
 
                         <figure>
-                            <img src="images/headToMoreChallenges.png" alt="Sign pointing to more challenges area in the Winners' Place" loading="lazy">
+                            <img src="images/headToMoreChallenges.png" alt="Sign pointing to more challenges area in the Winners' Place" loading="lazy" style="width: 350px;">
                             <figcaption class="sr-only">Sign indicating direction to additional challenges</figcaption>
                         </figure>
 
                         <figure>
-                            <img src="images/challengesAppear.png" alt="View of various challenges available in the Winners' Place" loading="lazy">
+                            <img src="images/challengesAppear.png" alt="View of various challenges available in the Winners' Place" loading="lazy" style="width: 350px;">
                             <figcaption class="sr-only">Display of available challenges</figcaption>
                         </figure>
                     </section>
@@ -540,7 +518,7 @@
                     <p>(and it also helps us advertise the game!)</p>
 
                     <figure>
-                        <img src="images/notifyButton.png" alt="Screenshot showing the Notify button on the Roblox game page" loading="lazy">
+                        <img src="images/notifyButton.png" alt="Screenshot showing the Notify button on the Roblox game page" loading="lazy" style="width: 400px;">
                         <figcaption class="sr-only">Location of the Notify button on Roblox</figcaption>
                     </figure>
                 </article>
